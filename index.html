@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио BI-разработчика</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #58a6ff, #1f6feb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { color: #8b949e; font-size: 1.2rem; margin-bottom: 2rem; }
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .card h2 { color: #58a6ff; margin-bottom: 0.5rem; font-size: 1.3rem; }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+        .tag {
+            background: #1f6feb33;
+            color: #58a6ff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid #1f6feb66;
+        }
+        .screenshot {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            margin-top: 1rem;
+        }
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .screenshot-grid img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .screenshot-grid img:hover { transform: scale(1.02); }
+        .skill-group { margin-bottom: 1rem; }
+        .skill-group h3 { color: #8b949e; font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .skill-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .skill-list span {
+            background: #21262d;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border: 1px solid #30363d;
+        }
+        .result {
+            background: #1f6feb22;
+            border-left: 3px solid #58a6ff;
+            padding: 0.75rem 1rem;
+            margin-top: 1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        .result strong { color: #58a6ff; }
+        footer {
+            text-align: center;
+            color: #484f58;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #21262d;
+        }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[Ваше Имя]</h1>
+        <p class="subtitle">BI-разработчик / Аналитик данных</p>
+
+        <div class="card">
+            <h2>О себе</h2>
+            <p>BI-разработчик с практическим опытом построения аналитических систем полного цикла: от подключения к источникам данных (API, DWH, Google Sheets) до моделирования, расчётов на DAX и визуализации в Power BI.</p>
+            <p style="margin-top: 0.75rem;">Специализируюсь на аналитике продаж на маркетплейсах (Wildberries) — юнит-экономика, рентабельность, комиссии, логистика, ABC-анализ.</p>
+        </div>
+
+        <div class="card">
+            <h2>Проект 1: Аналитика продаж на Wildberries</h2>
+            <div class="tags">
+                <span class="tag">Power BI</span>
+                <span class="tag">Postgres</span>
+                <span class="tag">DAX</span>
+                <span class="tag">Power Query</span>
+                <span class="tag">Wildberries API</span>
+            </div>
+            <p>Собрал отчёт для собственника: реальная прибыль с учётом комиссий, логистики и себестоимости; топы лидеров роста и падения; таблица менеджеров с отрицательной прибылью.</p>
+            <div class="screenshot-grid">
+                <img src="images/wb-dashboard-1.png" alt="Дашборд WB - KPI" loading="lazy">
+                <img src="images/wb-dashboard-2.png" alt="Дашборд WB - Динамика" loading="lazy">
+                <img src="images/wb-dashboard-3.png" alt="Дашборд WB - Топы" loading="lazy">
+            </div>
+            <div class="result"><strong>Результат:</strong> готовый отчёт для принятия решений по ассортименту и логистике.</div>
+        </div>
+
+        <div class="card">
+            <h2>Проект 2: Аналитика продаж недвижимости</h2>
+            <div class="tags">
+                <span class="tag">Power BI Report Server</span>
+                <span class="tag">DAX</span>
+                <span class="tag">UX/UI</span>
+                <span class="tag">Документация 280+ мер</span>
+            </div>
+            <p>Разработал страницу аналитики отказов по воронке продаж, дополнил блок метрик с переключением м²/руб., создал документацию по 280+ DAX-мерам.</p>
+            <div class="result"><strong>Результат:</strong> устранил зависимость от ушедшего сотрудника, ускорил адаптацию новых разработчиков.</div>
+        </div>
+
+        <div class="card">
+            <h2>Навыки</h2>
+            <div class="skill-group">
+                <h3>BI-платформы</h3>
+                <div class="skill-list">
+                    <span>Power BI Desktop</span>
+                    <span>Power BI Service</span>
+                    <span>Report Server</span>
+                    <span>Power Query</span>
+                    <span>DAX</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Данные</h3>
+                <div class="skill-list">
+                    <span>SQL</span>
+                    <span>Postgres</span>
+                    <span>ETL</span>
+                    <span>Моделирование (звезда/снежинка)</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Визуализация и дизайн</h3>
+                <div class="skill-list">
+                    <span>UX/UI дашбордов</span>
+                    <span>Figma</span>
+                    <span>Сторителлинг</span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>📞 [Телефон] | ✉️ [Email] | 💬 [Telegram]</p>
+        </footer>
+    </div>
+</body>
+</html>
